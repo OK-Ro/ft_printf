@@ -4,16 +4,15 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 
 int ft_printf(const char *, ...);
 
 /*internal helpers*/
-int ft_print_char(char c);
-int ft_print_str(char *s);
-int ft_print_ptr(void *ptr);
-int ft_print_nbr(int n);
-int ft_print_unit(unsigned int n);
-int ft_print_hex(unsigned int n);
+int ft_printf_char(char c);
+int ft_printf_str(char *s);
+int ft_printf_ptr(void *ptr);
+int ft_printf_nbr(int n);
+int ft_printf_unit(unsigned int n);
+int ft_printf_hex(unsigned int n, int uppercase);
 
 #endif

@@ -1,8 +1,8 @@
 NAME = libftprintf.a
-SRC = ft_print.c ft_printf_char.c \
+SRC = ft_printf.c ft_printf_char.c \
 		ft_printf_str.c ft_printf_nbr.c \
 		ft_printf_ptr.c ft_printf_unit.c ft_printf_hex.c
-OBJECT = $(SRC: .c=.o)
+OBJECT = $(SRC:.c=.o)
 CC = cc 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -14,7 +14,7 @@ $(NAME): $(OBJECT)
 	ar rcs $(NAME) $(OBJECT)
 
 # COMPILE .c -> .o
-%.o: %.c ft_print.h.
+%.o: %.c ft_printf.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # CLEAN OBJECT FILES
@@ -30,7 +30,7 @@ re: fclean all
 
 # TEST PROGRAM
 test: $(NAME)
-	$(CC) test_ft_printf.c -L. -lftprinft -lbsd -o test
+	$(CC) main.c -L. -lftprintf -o test
 	./test
 
 .PHONY: clean fclean re test all

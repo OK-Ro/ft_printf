@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_nbr.c                                     :+:      :+:    :+:   */
+/*   ft_printf_str.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rokuni <rokuni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/25 13:41:39 by rokuni            #+#    #+#             */
-/*   Updated: 2026/03/25 13:41:59 by rokuni           ###   ########.fr       */
+/*   Created: 2026/03/25 13:41:07 by rokuni            #+#    #+#             */
+/*   Updated: 2026/03/25 17:28:20 by rokuni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int     ft_print_nbr(int n)
-{}
+int	ft_printf_str(char *s)
+{
+	int	i;
+	if (!s)
+		return (write(1, "(null)", 6));
+	i = 0;
+	while (s[i])
+	{
+		ft_printf_char(s[i]);
+		i++;
+	}
+	return (i);
+}

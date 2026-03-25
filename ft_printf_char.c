@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_hex.c                                     :+:      :+:    :+:   */
+/*   ft_printf_char.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rokuni <rokuni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/25 13:43:33 by rokuni            #+#    #+#             */
-/*   Updated: 2026/03/25 13:44:33 by rokuni           ###   ########.fr       */
+/*   Created: 2026/03/25 13:39:56 by rokuni            #+#    #+#             */
+/*   Updated: 2026/03/25 17:28:15 by rokuni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <unistd.h>
 
-int     ft_print_hex(unsigned int n, int upper)
-{}
+int ft_printf_char(char c)
+{
+    write(1, &c, 1);
+    return (1);
+}
