@@ -24,7 +24,7 @@ Buffer management (as implemented in glibc's `printf`) is intentionally not impl
 
 ```bash
 # Clone the repository
-git clone https://github.com/your_login/ft_printf.git
+git clone https://github.com/OK-Ro/ft_printf
 cd ft_printf
 
 # Build the library
