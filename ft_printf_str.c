@@ -6,7 +6,7 @@
 /*   By: rokuni <rokuni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 13:41:07 by rokuni            #+#    #+#             */
-/*   Updated: 2026/03/25 17:28:20 by rokuni           ###   ########.fr       */
+/*   Updated: 2026/03/29 15:57:46 by rokuni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 int	ft_printf_str(char *s)
 {
 	int	i;
+
 	if (!s)
-		return (write(1, "(null)", 6));
+		s = "(null)";
 	i = 0;
 	while (s[i])
 	{
