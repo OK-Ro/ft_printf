@@ -6,12 +6,11 @@
 /*   By: rokuni <rokuni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 13:39:56 by rokuni            #+#    #+#             */
-/*   Updated: 2026/03/25 17:28:15 by rokuni           ###   ########.fr       */
+/*   Updated: 2026/03/25 17:32:36 by rokuni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <unistd.h>
 
 int ft_printf_char(char c)
 {

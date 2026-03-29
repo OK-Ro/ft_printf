@@ -1,10 +1,22 @@
 #include "ft_printf.h"
+#include <stdio.h>
 
-int	main(void)
+int ft_printf_nbr(int n);
+
+
+
+int main(int argc, char **argv)
 {
-	ft_printf_str("Hello, world!\n");
-	ft_printf_str("Testing 123\n");
-	ft_printf_str(NULL);
+    int i = 0;
 
-	return (0);
+    while (i < argc)
+    {
+        printf("argv[%d] = %s\n", i, argv[i]);
+        i++;
+    }
+
+    printf("Total arguments (including program): %d\n", argc);
+    printf("User arguments only: %d\n", argc - 1);
+
+    return 0;
 }
