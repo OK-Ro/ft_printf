@@ -5,14 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rokuni <rokuni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/25 13:39:56 by rokuni            #+#    #+#             */
-/*   Updated: 2026/03/29 15:58:10 by rokuni           ###   ########.fr       */
+/*   Created: 2026/03/31 12:23:30 by rokuni            #+#    #+#             */
+/*   Updated: 2026/03/31 13:59:51 by rokuni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <unistd.h>
 
-int ft_printf_char(char c)
+int	ft_printf_char(char c)
 {
-    return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }

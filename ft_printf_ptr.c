@@ -5,20 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rokuni <rokuni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/25 13:42:13 by rokuni            #+#    #+#             */
-/*   Updated: 2026/03/29 15:57:58 by rokuni           ###   ########.fr       */
+/*   Created: 2026/03/31 12:25:25 by rokuni            #+#    #+#             */
+/*   Updated: 2026/03/31 14:30:51 by rokuni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+static int	ft_printf_hex_ptr(unsigned long n)
+{
+	const char	*base;
+	int			count;
+
+	count = 0;
+	base = "0123456789abcdef";
+	if (n >= 16)
+		count += ft_printf_hex_ptr(n / 16);
+	count += ft_printf_char(base[n % 16]);
+	return (count);
+}
+
 int	ft_printf_ptr(void *ptr)
 {
-	unsigned long	addr;
+	unsigned long	newptr;
+	int				count;
 
-	if (!ptr)
-		return (write(1, "(nil)", 5));
-	addr = (unsigned long)ptr;
-	write(1, "0x", 2);
-	ft_printf_hex(addr, 0);
+	newptr = (unsigned long)ptr;
+	count = ft_printf_str("0x");
+	count += ft_printf_hex_ptr(newptr);
+	return (count);
 }

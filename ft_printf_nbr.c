@@ -5,23 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rokuni <rokuni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/25 13:41:39 by rokuni            #+#    #+#             */
-/*   Updated: 2026/03/29 15:57:32 by rokuni           ###   ########.fr       */
+/*   Created: 2026/03/31 12:24:51 by rokuni            #+#    #+#             */
+/*   Updated: 2026/03/31 13:59:42 by rokuni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int     ft_printf_nbr(int n)
+int	ft_printf_nbr(int n)
 {
 	long	nb;
+	int		count;
+
+	count = 0;
 	nb = n;
 	if (nb < 0)
 	{
-		ft_printf_char('-');
+		count += ft_printf_char('-');
 		nb = -nb;
 	}
-	if (nb >= 10)
-		ft_printf_nbr(nb / 10);
-	ft_printf_char(nb % 10 + '0');
+	if (nb > 9)
+		count += ft_printf_nbr(nb / 10);
+	count += ft_printf_char(nb % 10 + '0');
+	return (count);
 }

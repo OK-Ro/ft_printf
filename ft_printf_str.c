@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rokuni <rokuni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/25 13:41:07 by rokuni            #+#    #+#             */
-/*   Updated: 2026/03/29 15:57:46 by rokuni           ###   ########.fr       */
+/*   Created: 2026/03/31 12:25:00 by rokuni            #+#    #+#             */
+/*   Updated: 2026/03/31 13:59:27 by rokuni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	ft_printf_str(char *s)
 {
-	int	i;
+	int	count;
 
 	if (!s)
 		s = "(null)";
-	i = 0;
-	while (s[i])
+	count = 0;
+	while (*s)
 	{
-		ft_printf_char(s[i]);
-		i++;
+		count += ft_printf_char(*s);
+		s++;
 	}
-	return (i);
+	return (count);
 }
