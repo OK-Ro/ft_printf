@@ -6,7 +6,7 @@
 /*   By: rokuni <rokuni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 12:25:25 by rokuni            #+#    #+#             */
-/*   Updated: 2026/04/03 14:31:13 by rokuni           ###   ########.fr       */
+/*   Updated: 2026/04/03 14:35:05 by rokuni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int	ft_printf_ptr(void *ptr)
 	unsigned long	newptr;
 	int				count;
 
+	if (!ptr)
+		return (ft_printf_str("(nil)"));
 	newptr = (unsigned long)ptr;
 	count = ft_printf_str("0x");
 	count += ft_printf_hex_ptr(newptr);

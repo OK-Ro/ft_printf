@@ -125,6 +125,10 @@ int main(void)
 	// Pointer
 	ft_printf("Pointer NULL: %p\n", ptr);
 	ft_printf("Pointer address: %p\n", &num);
+	//if null
+	    // NULL
+    printf("printf:    %p\n", NULL);
+    ft_printf("ft_printf: %p\n", NULL);
 
 	// Percent sign
 	ft_printf("Progress: %d%%\n", 100);
